@@ -1,25 +1,46 @@
-# ĐẶC TẢ YÊU CẦU HỆ THỐNG (BẢN NHÁP BAN ĐẦU)
+# ĐẶC TẢ YÊU CẦU HỆ THỐNG 
 
 ## 1. Mục tiêu dự án (Project Objectives)
 
-* **Mục tiêu kinh doanh:** Xây dựng hệ thống thương mại điện tử/nền tảng số giúp tối ưu hóa quy trình quản lý sản phẩm, đơn hàng và nâng cao trải nghiệm mua sắm trực tuyến cho khách hàng.
-* **Mục tiêu kỹ thuật:** Phát triển ứng dụng web/mobile đáp ứng tiêu chuẩn hiệu năng cao, bảo mật thông tin người dùng, giao diện thân thiện (UI/UX) và dễ dàng mở rộng tính năng trong tương lai.
+* **Mục tiêu kinh doanh:**
+* Số hóa và tự động hóa quy trình báo giá: Rút ngắn thời gian nhận báo giá từ vài giờ (chờ nhân viên kinh doanh phản hồi thủ công) xuống còn dưới 3 phút thông qua công cụ tự tùy chỉnh thực đơn và tính giá tự động theo số lượng khách (pax).
+Tối ưu hóa chuyển đổi khách hàng B2B & Event Agency: Cung cấp trải nghiệm đặt tiệc minh bạch, chuyên nghiệp (hỗ trợ xuất báo giá nhanh, quản lý thông tin xuất hóa đơn VAT, đặt cọc trực tuyến) nhằm tăng tỷ lệ chốt đơn từ nhóm khách hàng doanh nghiệp.
+Gia tăng giá trị trung bình trên mỗi đơn hàng (AOV): Khuyến khích khách hàng nâng cấp gói hoặc chọn thêm món lẻ (bánh ngọt, trái cây, đồ uống) thông qua tính năng gợi ý thông minh của AI Chatbot dựa trên ngân sách và tính chất sự kiện.
+Đảm bảo tính chính xác trong vận hành (Setup & Giao nhận): Kiểm soát chặt chẽ khung giờ giao hàng, thời gian setup tại địa điểm sự kiện và số lượng nhân sự/dụng cụ đi kèm, giảm thiểu rủi ro trễ giờ sự kiện.
+.
+* **Mục tiêu kỹ thuật:**
+* Xây dựng nền tảng Web Responsive toàn diện: Giao diện trực quan, tương thích mượt mà trên cả máy tính (phục vụ HR/Admin đặt hàng tại văn phòng) và thiết bị di động (phục vụ khách hàng theo dõi tiến độ tiệc tại hiện trường).
+Xây dựng bộ máy tính giá và kiểm tra lịch động (Dynamic Pricing & Slot Booking): Xử lý chính xác logic tính giá theo đầu người (kèm chiết khấu theo quy mô khách), cộng dồn món lẻ, phí vận chuyển/setup và khóa khung giờ nhận tiệc dựa trên năng lực phục vụ của bếp.
+Tích hợp AI Chatbot tư vấn thực đơn: Ứng dụng LLM API kết hợp dữ liệu thực đơn nội bộ để tư vấn tự động theo số lượng người, ngân sách/người và loại hình sự kiện (hội thảo, khai trương, trà chiều).
+Tích hợp cổng thanh toán trực tuyến (Sandbox): Hoàn thiện luồng thanh toán đặt cọc (30% - 50%) và thanh toán toàn bộ qua cổng VNPay/MoMo môi trường Sandbox, đảm bảo đồng bộ trạng thái đơn hàng tự động qua Webhook/IPN.
+
 
 ---
 
 ## 2. Phạm vi dự án (Scope)
 
-### Trong phạm vi (In-Scope)
-* Hệ thống quản lý tài khoản người dùng (Đăng ký, Đăng nhập, Phân quyền).
-* Quản lý danh mục sản phẩm, tìm kiếm và lọc sản phẩm theo tiêu chí.
-* Giỏ hàng và quy trình thanh toán trực tuyến cơ bản.
-* Trang quản trị (Admin Dashboard) quản lý sản phẩm, đơn hàng và người dùng.
-* Ghi nhận log hoạt động và lịch sử giao dịch.
+2.1. Trong phạm vi dự án (In-Scope)
+Phân hệ / Nhóm tính năng
+Chi tiết nghiệp vụ triển khai
+Quản lý danh mục & Gói tiệc
+Hiển thị thông tin các gói tiệc chuẩn (Tea Break hội thảo, Trà chiều, Finger Food, Khai trương...) kèm định lượng món/người, hình ảnh thực tế, mức đặt tối thiểu (MOQ - ví dụ: từ 15 pax) và danh sách món lẻ gọi thêm.
+Công cụ thiết kế tiệc & Báo giá tự động
+Cho phép khách nhập số lượng khách, chọn gói cơ bản, tùy chỉnh thay đổi/thêm bớt món lẻ; hệ thống tự động tính đơn giá/người, tổng chi phí, thuế VAT và cho phép tải file báo giá PDF.
+Đặt lịch & Quản lý thông tin sự kiện
+Chọn ngày, khung giờ bắt đầu sự kiện, khung giờ yêu cầu setup hoàn tất; nhập địa chỉ giao hàng, ghi chú điều kiện mặt bằng (thang máy, hầm gửi xe, nguồn điện) và thông tin xuất hóa đơn doanh nghiệp.
+AI Chatbot tư vấn thực đơn
+Tư vấn 24/7 giúp khách hàng chọn gói tiệc phù hợp với ngân sách (VD: "Tiệc cho 40 người ngân sách 100k/người"), giải đáp các câu hỏi về thành phần món ăn (chay, ít ngọt) và thời gian chuẩn bị.
+Giỏ hàng & Thanh toán (Sandbox)
+Hỗ trợ hình thức thanh toán đặt cọc (VD: 50% giá trị đơn) hoặc thanh toán 100% qua VNPay/MoMo Sandbox; cập nhật trạng thái thanh toán tự động.
+Quản trị vận hành (Admin Portal)
+Quản lý thực đơn/nguyên liệu cấu thành gói; quản lý đơn hàng theo trạng thái đặc thù ngành tiệc (Chờ xác nhận → Đã cọc → Đang chuẩn bị bếp → Đang giao & Setup → Hoàn tất / Thu hồi dụng cụ); quản lý năng lực nhận đơn theo khung giờ.
 
-### Ngoài phạm vi (Out-of-Scope)
-* Tích hợp các cổng thanh toán quốc tế phức tạp ngoài phạm vi hỗ trợ ban đầu (ví dụ: tiền mã hóa, ví điện tử quốc tế chuyên biệt).
-* Hệ thống giao hàng tự động bằng drone hoặc vận chuyển nội bộ phức tạp (sẽ tích hợp API bên thứ ba ở giai đoạn sau).
-* Tính năng thực tế ảo (AR) thử sản phẩm trực tuyến.
+2.2. Ngoài phạm vi dự án (Out-of-Scope)
+Tích hợp xuất hóa đơn điện tử tự động (E-Invoice API): Hệ thống chỉ lưu trữ thông tin mã số thuế, tên công ty, email nhận hóa đơn của khách B2B để kế toán xuất thủ công bên ngoài, không kết nối trực tiếp với hệ thống của Tổng cục Thuế hay bên thứ ba (MISA, VNPT).
+Định vị GPS tài xế/nhân sự setup theo thời gian thực (Real-time Tracking): Không xây dựng bản đồ theo dõi vị trí shipper trực tiếp như ứng dụng giao đồ ăn nhanh; chỉ cập nhật trạng thái đơn hàng theo các mốc thời gian.
+Quản lý kho nguyên liệu thô & định mức bếp sâu (ERP/Inventory): Không tính toán tự động lượng bột, đường, bơ tồn kho theo từng mẻ bánh; Admin chỉ bật/tắt trạng thái "Còn phục vụ / Hết món" và giới hạn số lượng tiệc tối đa trong một khung giờ.
+Ứng dụng di động gốc (Native Mobile App trên iOS/Android): Chỉ phát triển giao diện Web Responsive, không đóng gói ứng dụng đưa lên App Store hay Google Play.
+Thanh toán công nợ trả sau (Credit Line) tự động: Các hợp đồng doanh nghiệp thanh toán sau sự kiện sẽ do Admin duyệt thủ công, không xây dựng hệ thống chấm điểm tín dụng hay quản lý hạn mức công nợ tự động.
 
 ---
 
