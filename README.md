@@ -65,12 +65,12 @@ Dự án cho bài cuối kỳ
 ---
 
 ## 4. Thành viên nhóm
-* **Phạm Thị Thảo** – BA Lead & Light Frontend Dev
-* **Võ Thị Ngọc Hiển** – UI/UX Designer & Responsive Dev
-* **Nguyễn Thị Kim Nguyên** – Business Analyst & Frontend Client Dev
-* **Lê Trí Lộc** – Git Admin / DevOps & Backend / Payment Dev
-* **Hồ Thu Hằng** – System Analyst & Admin Dashboard / Voucher Dev
-* **Đinh Phạm Mỹ Duyên** – AI Manager & QA Tester / Security & Innovation Dev
+* **TV1** – BA Lead & Light Frontend Dev
+* **TV2** – UI/UX Designer & Responsive Dev
+* **TV3** – Business Analyst & Frontend Client Dev
+* **TV4** – Git Admin / DevOps & Backend / Payment Dev
+* **TV5** – System Analyst & Admin Dashboard / Voucher Dev
+* **TV6** – AI Manager & QA Tester / Security & Innovation Dev
 
 ---
 
