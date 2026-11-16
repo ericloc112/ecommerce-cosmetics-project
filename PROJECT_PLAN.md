@@ -25,17 +25,17 @@
 Dự án TEAVENTO được triển khai qua 6 giai đoạn chính xuyên suốt học phần:
 
 * **Giai đoạn 1: Khảo sát và xác định yêu cầu**
-  Cả nhóm cùng khảo sát bài toán kinh doanh tiệc trà TEAVENTO; Võ Thị Ngọc Hiển khảo sát 3 đối thủ; Nguyễn Thị Kim Nguyên xác định phạm vi & chức năng (`REQUIREMENTS.md`); Lê Trí Lộc khởi tạo GitHub Repository; Phạm Thị Thảo nộp bộ tài liệu kế hoạch ban đầu.
+  Thành viên 2 khảo sát 3 đối thủ; Thành viên 3 xác định phạm vi & chức năng (REQUIREMENTS.md); Thành viên 4 khởi tạo GitHub Repository; Thành viên 1 nộp bộ tài liệu kế hoạch ban đầu.
 * **Giai đoạn 2: Thiết kế giao diện và kiến trúc dữ liệu**
-  Võ Thị Ngọc Hiển chủ trì vẽ sơ đồ giao diện Wireframe & bản Figma (Desktop/Mobile); Hồ Thu Hằng & Lê Trí Lộc thiết kế CSDL MySQL và vẽ luồng nghiệp vụ đặt tiệc; cả nhóm tham gia đóng góp ý kiến.
+  Thành viên 2 chủ trì vẽ sơ đồ giao diện Wireframe & bản Figma (Desktop/Mobile); Thành viên 4 & Thành viên 5 thiết kế CSDL MySQL và vẽ luồng nghiệp vụ đặt tiệc; cả nhóm tham gia đóng góp ý kiến
 * **Giai đoạn 3: Xây dựng các chức năng frontend**
-  Võ Thị Ngọc Hiển & Nguyễn Thị Kim Nguyên chủ trì lập trình giao diện Client (Responsive), phát triển bộ lọc tiệc theo ngân sách, tính năng chọn mốc giờ setup và giỏ hàng; Phạm Thị Thảo làm trang Giới thiệu/FAQ & nhập liệu mẫu; Hồ Thu Hằng dựng giao diện Admin Dashboard.
+  Thành viên 2 & Thành viên 3 chủ trì lập trình giao diện Client (Responsive), phát triển bộ lọc tiệc theo ngân sách, tính năng chọn mốc giờ setup và giỏ hàng; Thành viên 1 làm trang Giới thiệu/FAQ & nhập liệu mẫu; Thành viên 5 dựng giao diện Admin Dashboard.
 * **Giai đoạn 4: Phát triển backend và cơ sở dữ liệu**
-  Lê Trí Lộc chủ trì xây dựng CSDL MySQL & hệ thống API, tích hợp cổng thanh toán Sandbox (VNPay/MoMo) và tính phí vận chuyển; Hồ Thu Hằng phát triển Module Voucher; toàn nhóm tham gia chạy thử và kết nối dữ liệu.
+  Thành viên 4 chủ trì xây dựng CSDL MySQL & hệ thống API, tích hợp cổng thanh toán Sandbox (VNPay/MoMo) và tính phí vận chuyển; Thành viên 5 phát triển Module Voucher; toàn nhóm tham gia chạy thử và kết nối dữ liệu.
 * **Giai đoạn 5: Tích hợp và kiểm thử**
-  Đinh Phạm Mỹ Duyên chủ trì lập Test Cases và kiểm thử bảo mật (XSS, SQLi, Auth); toàn nhóm cùng tham gia kiểm thử liên vết (QA Testing), sửa lỗi giao diện/API và tích hợp tính năng Innovation (AI Chatbot).
+  Thành viên 6 chủ trì lập Test Cases và kiểm thử bảo mật (XSS, SQLi, Auth); toàn nhóm cùng tham gia kiểm thử liên kết (QA Testing), sửa lỗi giao diện/API và tích hợp tính năng Innovation (AI Chatbot).
 * **Giai đoạn 6: Triển khai và hoàn thiện**
-  Lê Trí Lộc triển khai website lên môi trường Internet (Deployment); Phạm Thị Thảo chủ trì tổng hợp Báo cáo Word đồ án (`.docx`) từ phần đóng góp của 6 thành viên; toàn nhóm chuẩn bị Slide và luyện tập kiểm thử sửa code (Live Coding Test) phục vụ bảo vệ.
+  Thành viên 4 triển khai website lên môi trường Internet (Deployment); Thành viên 1 chủ trì tổng hợp Báo cáo Word đồ án (.docx) từ phần đóng góp của 6 thành viên; toàn nhóm chuẩn bị Slide và luyện tập kiểm thử sửa code (Live Coding Test) phục vụ bảo vệ.
 
 ---
 
@@ -43,12 +43,12 @@ Dự án TEAVENTO được triển khai qua 6 giai đoạn chính xuyên suốt 
 
 | Mã công việc | Người phụ trách (Lead) | Nội dung nhiệm vụ & Kết quả cần đạt | Trạng thái |
 | :---: | :--- | :--- | :---: |
-| **01** | Phạm Thị Thảo (BA Lead) | Lập tài liệu `README.md`, `PROJECT_PLAN.md`; điều phối dự án; dựng trang Giới thiệu/FAQ & nhập dữ liệu tiệc mẫu; chủ trì tổng hợp Báo cáo Word đồ án. | Chưa bắt đầu |
-| **02** | Võ Thị Ngọc Hiển (UI/UX Lead) | Lập tài liệu `docs/competitor-analysis.md`; thiết kế Figma UI/UX; lập trình giao diện Client Responsive và viết nội dung Chương 2 trong bài báo cáo Word. | Chưa bắt đầu |
-| **03** | Nguyễn Thị Kim Nguyên (BA Lead) | Lập tài liệu `REQUIREMENTS.md`; lập trình JS bộ lọc tiệc theo ngân sách, chọn ngày/giờ setup linh hoạt, giỏ hàng tự động và viết nội dung Chương 3 (Client Frontend) trong bài báo cáo Word. | Chưa bắt đầu |
-| **04** | Lê Trí Lộc (Backend Lead) | Khởi tạo Repo GitHub & Issues; thiết kế CSDL MySQL, hệ thống API, tích hợp thanh toán VNPay/MoMo Sandbox, API tính phí vận chuyển và viết nội dung Chương 2 & 3 (CSDL & Payment API) trong bài báo cáo Word. | Chưa bắt đầu |
-| **05** | Hồ Thu Hằng (Admin Lead) | Lập tài liệu `docs/business-workflow.md`; phát triển phân hệ Admin Dashboard (biểu đồ thống kê), Module Voucher và viết nội dung Chương 2 & 3 (Admin & Voucher) trong bài báo cáo Word. | Chưa bắt đầu |
-| **06** | Đinh Phạm Mỹ Duyên (QA & AI Lead) | Lập `AGENTS.md`, `AI_USAGE_LOG.md`; lập bộ Test Cases kiểm thử bảo mật (XSS, SQLi); phát triển Module AI Chatbot và viết nội dung Chương 4 (Testing & Security) trong bài báo cáo Word. | Chưa bắt đầu |
+| **01** | Thành viên 1 (BA Lead) | Lập tài liệu `README.md`, `PROJECT_PLAN.md`; điều phối dự án; dựng trang Giới thiệu/FAQ & nhập dữ liệu tiệc mẫu; chủ trì tổng hợp Báo cáo Word đồ án. | Chưa bắt đầu |
+| **02** | Thành viên 2 (UI/UX Lead) | Lập tài liệu `docs/competitor-analysis.md`; thiết kế Figma UI/UX; lập trình giao diện Client Responsive và viết nội dung Chương 2 trong bài báo cáo Word. | Chưa bắt đầu |
+| **03** | Thành viên 3 (BA Lead) | Lập tài liệu `REQUIREMENTS.md`; lập trình JS bộ lọc tiệc theo ngân sách, chọn ngày/giờ setup linh hoạt, giỏ hàng tự động và viết nội dung Chương 3 (Client Frontend) trong bài báo cáo Word. | Chưa bắt đầu |
+| **04** | Thành viên 4 (Backend Lead) | Khởi tạo Repo GitHub & Issues; thiết kế CSDL MySQL, hệ thống API, tích hợp thanh toán VNPay/MoMo Sandbox, API tính phí vận chuyển và viết nội dung Chương 2 & 3 (CSDL & Payment API) trong bài báo cáo Word. | Chưa bắt đầu |
+| **05** | Thành viên 5 (Admin Lead) | Lập tài liệu `docs/business-workflow.md`; phát triển phân hệ Admin Dashboard (biểu đồ thống kê), Module Voucher và viết nội dung Chương 2 & 3 (Admin & Voucher) trong bài báo cáo Word. | Chưa bắt đầu |
+| **06** | Thành viên 6 (QA & AI Lead) | Lập `AGENTS.md`, `AI_USAGE_LOG.md`; lập bộ Test Cases kiểm thử bảo mật (XSS, SQLi); phát triển Module AI Chatbot và viết nội dung Chương 4 (Testing & Security) trong bài báo cáo Word. | Chưa bắt đầu |
 
 ---
 
