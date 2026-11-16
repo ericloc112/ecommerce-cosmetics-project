@@ -68,7 +68,11 @@ Vì dự án được lưu trữ trên GitHub Repository ở chế độ Public,
   AI chỉ đóng vai trò trợ lý gợi ý cấu trúc, sinh code khung và phản biện. Thành viên phụ trách module nào phải đọc hiểu 100% đoạn code do AI sinh ra trước khi đưa vào dự án.
 
 * **Quy trình 4 bước khi dùng AI viết code hoặc tài liệu:**
+
   **Bước 1 – Cung cấp ngữ cảnh:** Đính kèm yêu cầu từ `REQUIREMENTS.md`, `docs/business-workflow.md` và các quy tắc trong `AGENTS.md` vào câu lệnh (Prompt).
+  
   **Bước 2 – Kiểm tra chéo (Review & Refactor):** Đối chiếu kết quả AI trả về với bài toán TEAVENTO (kiểm tra xem AI có bị nhầm sang web bán hàng thông thường không).
+  
   **Bước 3 – Kiểm thử (Testing):** Chạy thử nghiệm các trường hợp biên (Edge cases: đặt số khách nhỏ hơn `min_pax`, chọn ngày trong quá khứ, nhập mã Voucher hết hạn, hủy thanh toán Sandbox).
+  
   **Bước 4 – Ghi nhật ký:** Cập nhật lịch sử sử dụng và các quyết định chỉnh sửa vào tệp `AI_USAGE_LOG.md` trước khi tạo Pull Request hoặc đóng GitHub Issue.
