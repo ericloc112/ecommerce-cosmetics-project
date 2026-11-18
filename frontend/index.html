@@ -18,9 +18,9 @@
     <a class="brand" href="#home" aria-label="TEAVENTO trang chủ"><span class="brand-mark">T</span><span>TEAVENTO<small>TEA · EVENT · MOMENTO</small></span></a>
     <button class="menu-toggle" aria-label="Mở menu" aria-expanded="false">☰</button>
     <nav class="main-nav" aria-label="Điều hướng chính">
-      <a href="#home">Trang chủ</a><a href="#packages">Gói tiệc</a><a href="#story">Về TEAVENTO</a><a href="#contact">Liên hệ</a>
+      <a href="#home">Trang chủ</a><a href="#packages">Gói tiệc</a><a href="#cart">Giỏ tiệc</a><a href="#tracking">Tra cứu đơn</a><a href="#admin">Quản trị demo</a>
     </nav>
-    <div class="header-actions"><a class="cart-link" href="#packages" aria-label="Giỏ tiệc">Giỏ tiệc <span id="cart-count">0</span></a><a class="button button-dark button-small" href="#packages">Chọn gói tiệc <span>↗</span></a></div>
+    <div class="header-actions"><a class="cart-link" href="#cart" aria-label="Giỏ tiệc">Giỏ tiệc <span id="cart-count">0</span></a><a class="button button-dark button-small" href="#packages">Chọn gói tiệc <span>↗</span></a></div>
   </header>
 
   <main>
@@ -32,11 +32,7 @@
         <div class="hero-buttons"><a class="button button-dark" href="#packages">Khám phá gói tiệc <span>↗</span></a><a class="text-link" href="#story">Câu chuyện TEAVENTO <span>→</span></a></div>
         <div class="hero-proof"><div class="avatar-stack"><span>H</span><span>M</span><span>L</span><span>+</span></div><p><strong>500+</strong> buổi tiệc được gửi gắm<br><small>4.9/5 từ khách hàng của chúng tôi</small></p></div>
       </div>
-      <div class="hero-visual">
-        <div class="hero-image" role="img" aria-label="Bàn tiệc trà với bánh ngọt và hoa tươi"></div>
-        <div class="image-label"><span class="label-icon">✳</span><span><strong>Khoảnh khắc đáng nhớ</strong><small>Được chuẩn bị bằng sự tận tâm</small></span></div>
-        <div class="hero-stamp">MADE WITH<br><b>♡</b><br>CARE</div>
-      </div>
+      <div class="hero-visual"><div class="hero-image" role="img" aria-label="Bàn tiệc trà với bánh ngọt và hoa tươi"></div><div class="image-label"><span class="label-icon">✳</span><span><strong>Khoảnh khắc đáng nhớ</strong><small>Được chuẩn bị bằng sự tận tâm</small></span></div><div class="hero-stamp">MADE WITH<br><b>♡</b><br>CARE</div></div>
       <div class="hero-bottom"><span>01 — 03</span><span class="scroll-line"></span><span>CUỘN ĐỂ KHÁM PHÁ</span><span class="hero-bottom-note">Hương vị tinh tế · Trải nghiệm trọn vẹn</span></div>
     </section>
 
@@ -44,25 +40,44 @@
 
     <section class="packages-section" id="packages">
       <div class="section-heading"><div><p class="eyebrow"><span></span> THỰC ĐƠN ĐƯỢC YÊU THÍCH</p><h2>Chọn gói tiệc<br><em>phù hợp với bạn.</em></h2></div><p class="section-lead">Mỗi gói được cân chỉnh để buổi tiệc vừa ngon miệng, đẹp mắt và phù hợp ngân sách.</p></div>
-      <div class="catalog-toolbar">
-        <div class="category-tabs" role="group" aria-label="Lọc loại tiệc">
-          <button class="tab active" data-category="all">Tất cả <span>04</span></button><button class="tab" data-category="tea-break">Tea break</button><button class="tab" data-category="afternoon">Trà chiều</button><button class="tab" data-category="finger-food">Finger food</button>
-        </div>
-        <label class="search-box"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Tìm gói tiệc..." aria-label="Tìm gói tiệc"></label>
-      </div>
-      <div class="filter-row">
-        <label>Ngân sách / khách <select id="budget-filter"><option value="all">Tất cả mức giá</option><option value="100000">Dưới 100.000đ</option><option value="150000">Dưới 150.000đ</option><option value="200000">Dưới 200.000đ</option></select></label>
-        <label>Số lượng khách <select id="guest-filter"><option value="all">Tất cả quy mô</option><option value="20">Tối đa 20 khách</option><option value="50">Tối đa 50 khách</option><option value="100">Từ 50 khách trở lên</option></select></label>
-        <span class="result-count" id="result-count">04 gói tiệc</span>
-      </div>
-      <div class="package-grid" id="package-grid" aria-live="polite"></div>
-      <div class="empty-state" id="empty-state" hidden>Chưa tìm thấy gói tiệc phù hợp. Hãy thử thay đổi bộ lọc nhé.</div>
+      <div class="catalog-toolbar"><div class="category-tabs" role="group" aria-label="Lọc loại tiệc"><button class="tab active" data-category="all">Tất cả</button><button class="tab" data-category="tea-break">Tea break</button><button class="tab" data-category="afternoon">Trà chiều</button><button class="tab" data-category="finger-food">Finger food</button></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Tìm gói tiệc..." aria-label="Tìm gói tiệc"></label></div>
+      <div class="filter-row"><label>Ngân sách tối đa / khách <select id="budget-filter"><option value="all">Tất cả mức giá</option><option value="100000">Dưới 100.000đ</option><option value="150000">Dưới 150.000đ</option><option value="200000">Dưới 200.000đ</option></select></label><label>Số lượng khách dự kiến <select id="guest-filter"><option value="all">Tất cả quy mô</option><option value="10">10 khách</option><option value="20">20 khách</option><option value="30">30 khách</option><option value="50">50 khách</option><option value="100">100 khách</option></select></label><span class="result-count" id="result-count">04 gói tiệc</span></div>
+      <div class="package-grid" id="package-grid" aria-live="polite"></div><div class="empty-state" id="empty-state" hidden>Chưa tìm thấy gói tiệc phù hợp. Hãy thử thay đổi bộ lọc nhé.</div>
       <div class="catalog-footer"><p>Chưa tìm thấy thực đơn phù hợp? <strong>Chúng tôi có thể thiết kế riêng cho bạn.</strong></p><a class="text-link" href="#contact">Trao đổi với chuyên viên <span>→</span></a></div>
+    </section>
+
+    <section class="workspace-section" id="cart">
+      <div class="section-heading compact-heading"><div><p class="eyebrow"><span></span> ĐƠN ĐẶT TIỆC CỦA BẠN</p><h2>Giỏ tiệc <em>& đặt lịch.</em></h2></div><p class="section-lead">Chọn gói, số khách và thời gian tổ chức. Đây là bản demo: đơn được lưu trên trình duyệt này.</p></div>
+      <div class="workspace-grid"><div class="panel"><div class="panel-heading"><h3>Thực đơn đã chọn</h3><span id="cart-lines-label">0 gói</span></div><div id="cart-lines"></div><div id="cart-empty" class="empty-cart">Giỏ tiệc đang trống. Hãy xem <a href="#packages">các gói tiệc</a> và chọn thực đơn phù hợp.</div></div>
+        <div class="panel summary-panel"><div class="panel-heading"><h3>Tạm tính</h3></div><div class="summary-line"><span>Thực đơn</span><strong id="cart-subtotal">0đ</strong></div><div class="summary-line"><span>Phí setup demo</span><strong id="cart-setup">0đ</strong></div><div class="summary-line total-line"><span>Tổng dự kiến</span><strong id="cart-total">0đ</strong></div><p class="form-hint">Phí setup demo hiện cố định 120.000đ/đơn; hệ thống thật sẽ tính theo khu vực. Giá cuối cùng cần được backend xác nhận.</p><a class="button button-dark full-button" id="go-checkout" href="#booking">Tiếp tục đặt lịch <span>→</span></a></div>
+      </div>
+    </section>
+
+    <section class="workspace-section booking-section" id="booking">
+      <div class="section-heading compact-heading"><div><p class="eyebrow"><span></span> THÔNG TIN SỰ KIỆN</p><h2>Đặt lịch <em>phục vụ.</em></h2></div><p class="section-lead">Điền thông tin liên hệ và lịch setup. Vui lòng đặt trước ít nhất 24 giờ.</p></div>
+      <form class="panel booking-form" id="booking-form">
+        <div class="form-grid"><label>Người liên hệ<input name="customerName" required maxlength="100" placeholder="Họ và tên"></label><label>Số điện thoại<input name="phone" required inputmode="tel" pattern="[0-9+ .()-]{9,18}" placeholder="090 123 4567"></label><label>Email<input name="email" type="email" required maxlength="150" placeholder="ban@congty.vn"></label><label>Ngày tổ chức<input name="eventDate" id="event-date" type="date" required></label><label>Giờ setup hoàn tất<select name="setupTime" required><option value="">Chọn khung giờ</option><option>07:00–08:00</option><option>08:00–09:00</option><option>09:00–10:00</option><option>10:00–11:00</option><option>13:00–14:00</option><option>14:00–15:00</option><option>15:00–16:00</option><option>16:00–17:00</option></select></label><label class="full-field">Địa chỉ tổ chức<input name="address" required maxlength="250" placeholder="Số nhà, đường, quận/huyện, tỉnh/thành"></label><label class="full-field">Ghi chú sự kiện<textarea name="notes" maxlength="500" rows="3" placeholder="Tầng/lầu, thang máy, dị ứng thực phẩm hoặc yêu cầu setup..."></textarea></label></div>
+        <div class="payment-choice"><p>Hình thức thanh toán demo</p><label><input type="radio" name="paymentPlan" value="deposit" checked> Đặt cọc 50%</label><label><input type="radio" name="paymentPlan" value="full"> Thanh toán 100%</label><span>Chỉ ghi nhận lựa chọn; chưa kết nối cổng thanh toán.</span></div>
+        <div class="booking-actions"><p>Đặt hàng đồng nghĩa bạn xác nhận thông tin sự kiện ở trên.</p><button class="button button-dark" type="submit">Tạo đơn demo <span>↗</span></button></div>
+      </form>
+    </section>
+
+    <section class="workspace-section tracking-section" id="tracking">
+      <div class="section-heading compact-heading"><div><p class="eyebrow"><span></span> THEO DÕI TIẾN ĐỘ</p><h2>Tra cứu <em>đơn tiệc.</em></h2></div><p class="section-lead">Nhập mã đơn vừa tạo để xem trạng thái. Dữ liệu chỉ nằm trong trình duyệt hiện tại.</p></div>
+      <form class="lookup-form" id="tracking-form"><label for="tracking-code">Mã đơn đặt tiệc</label><input id="tracking-code" name="trackingCode" placeholder="Ví dụ: TV-123456" required><button class="button button-dark" type="submit">Tra cứu <span>⌕</span></button></form>
+      <div id="tracking-result" class="tracking-result" aria-live="polite"></div>
+    </section>
+
+    <section class="workspace-section admin-section" id="admin">
+      <div class="section-heading compact-heading"><div><p class="eyebrow"><span></span> BẢNG ĐIỀU HÀNH MẪU</p><h2>Quản trị <em>đơn tiệc.</em></h2></div><p class="section-lead">Giao diện minh họa để thử luồng duyệt đơn. Chưa có đăng nhập/phân quyền và không dùng cho dữ liệu thật.</p></div>
+      <div class="admin-metrics"><article class="metric-card"><span>Tổng đơn demo</span><strong id="metric-orders">0</strong></article><article class="metric-card"><span>Chờ xác nhận</span><strong id="metric-pending">0</strong></article><article class="metric-card"><span>Doanh thu đơn hoàn thành</span><strong id="metric-revenue">0đ</strong></article></div>
+      <div class="panel admin-panel"><div class="panel-heading"><h3>Danh sách đặt tiệc</h3><button class="text-button" id="refresh-admin" type="button">Làm mới ↻</button></div><div class="table-scroll"><table><thead><tr><th>Mã đơn</th><th>Khách hàng</th><th>Ngày tiệc</th><th>Tổng tiền</th><th>Trạng thái</th><th>Cập nhật trạng thái</th></tr></thead><tbody id="admin-orders"></tbody></table></div><p class="empty-admin" id="admin-empty">Chưa có đơn demo. Tạo đơn ở phần Đặt lịch để kiểm tra luồng.</p></div>
     </section>
 
     <section class="service-note" id="contact"><div class="note-icon">✳</div><div><p class="eyebrow">TEAVENTO ĐỒNG HÀNH CÙNG BẠN</p><h2>Từ ý tưởng đến bàn tiệc,<br><em>mọi thứ đều thật nhẹ nhàng.</em></h2></div><a class="button button-light" href="mailto:hello@teavento.vn">Nhận tư vấn miễn phí <span>↗</span></a></section>
   </main>
   <footer class="site-footer"><a class="brand brand-footer" href="#home"><span class="brand-mark">T</span><span>TEAVENTO<small>TEA · EVENT · MOMENTO</small></span></a><p>Chăm chút từng khoảnh khắc, trọn vẹn từng buổi tiệc.</p><span>© 2026 TEAVENTO · Bản demo học phần</span></footer>
+  <dialog class="detail-dialog" id="package-dialog"><button class="dialog-close" type="button" aria-label="Đóng">×</button><div id="package-detail"></div></dialog>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>

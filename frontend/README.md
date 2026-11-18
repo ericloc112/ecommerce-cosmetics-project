@@ -1,24 +1,23 @@
 # TEAVENTO Frontend Prototype
 
-Prototype bước A: landing page và danh mục gói tiệc responsive bằng HTML, CSS và JavaScript thuần. Gói tiệc hiện là dữ liệu demo trong `app.js`; giỏ hàng chỉ lưu số lượng demo trong trình duyệt (localStorage), chưa tạo đơn thật và chưa kết nối API.
+Prototype bước A: giao diện responsive bằng HTML, CSS và JavaScript thuần. Dữ liệu gói tiệc mẫu nằm trong `app.js`; giỏ hàng và đơn demo được lưu cục bộ bằng `localStorage`.
 
 ## Chạy thử
-
-Mở `index.html` trong trình duyệt hoặc phục vụ thư mục này bằng một máy chủ tĩnh:
 
 ```bash
 cd frontend
 python -m http.server 8000
 ```
 
-Sau đó mở http://localhost:8000.
+Mở http://localhost:8000.
 
-## Đã có
+## Các luồng prototype
 
-- Trang chủ TEAVENTO và điều hướng đến danh mục gói tiệc.
-- Thẻ gói tiệc, thông tin giá/khách và quy mô khách mẫu.
-- Tìm kiếm, lọc danh mục, ngân sách và quy mô khách.
-- Nút thêm gói vào giỏ demo, giữ số lượng sau khi tải lại trang.
-- Responsive cho desktop và mobile; không cần cài package.
+- Trang chủ và danh mục gói tiệc; tìm kiếm, lọc danh mục, ngân sách tối đa/khách và số khách dự kiến.
+- Chi tiết gói hiển thị thực đơn, giá/khách, quy mô phục vụ; nhập số khách rồi thêm vào giỏ.
+- Giỏ tiệc cho phép đổi số khách hoặc xóa gói; kiểm tra đơn tối thiểu 500.000đ và cộng phí setup demo 120.000đ.
+- Đặt lịch gồm liên hệ, ngày tiệc (tối thiểu 24 giờ sau), khung giờ setup, địa chỉ, ghi chú; chọn mức đặt cọc demo 50% hoặc toàn bộ.
+- Tra cứu đơn theo mã TV-xxxxxx; quản trị demo xem đơn, số đơn/doanh thu hoàn thành và cập nhật trạng thái.
+- Dữ liệu mẫu: bốn gói tiệc có tên, giá, ảnh, danh sách món, min/max khách trong `app.js`.
 
-Các bước giỏ hàng/checkout thực tế, xác thực, dữ liệu cơ sở dữ liệu và thanh toán thuộc giai đoạn B/C.
+**Lưu ý:** Đây chỉ là prototype frontend. Giỏ hàng, đơn và trạng thái chỉ lưu trên cùng trình duyệt. Không có backend, xác thực/phân quyền thực sự hay thanh toán; không nhập dữ liệu khách hàng thật. Kết nối API, xác minh giá phía server và bảo vệ admin cần làm ở bước B/C.
